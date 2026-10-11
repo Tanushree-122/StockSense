@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+<h1 class="h3 mb-3">Welcome, {{ current_user.name }}</h1>
+
+<div class="row g-3 mb-4">
+  <div class="col-12 col-md-4">
+    <div class="card h-100"><div class="card-body">
+      <div class="text-secondary small">Today's revenue</div>
+      <div class="fs-4 fw-semibold">{{ 0|rupees }}</div>
+      <div class="text-secondary small">Live numbers arrive on Day 7</div>
+    </div></div>
+  </div>
+  <div class="col-12 col-md-4">
+    <div class="card h-100"><div class="card-body">
+      <div class="text-secondary small">Sample rupee format</div>
+      <div class="fs-4 fw-semibold">{{ 125000|rupees }}</div>
+      <div class="text-secondary small">Indian digit grouping</div>
+    </div></div>
+  </div>
+  <div class="col-12 col-md-4">
+    <div class="card h-100"><div class="card-body">
+      <div class="text-secondary small">Database</div>
+      {% if db_ok %}
+        <div class="fs-4 fw-semibold text-success"><i class="bi bi-check-circle me-1"></i>Connected</div>
+      {% else %}
+        <div class="fs-4 fw-semibold text-danger"><i class="bi bi-x-circle me-1"></i>Not connected</div>
+      {% endif %}
+      <div class="text-secondary small">Foundation check</div>
+    </div></div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-body">
+    <h2 class="h5">Foundation is running</h2>
+    <p class="mb-0 text-secondary">
+      Login, database, and layout are working. Products, sales, alerts, and
+      recommendations are added over the next days.
+    </p>
+  </div>
+</div>
+{% endblock %}

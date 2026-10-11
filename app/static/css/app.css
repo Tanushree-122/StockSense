@@ -1,0 +1,9 @@
+body { min-height: 100vh; }
+.table-responsive { -webkit-overflow-scrolling: touch; }
+.card { border-color: rgba(0, 0, 0, 0.08); }
+.badge-status-ok { background-color: #198754; }
+.badge-status-low { background-color: #fd7e14; }
+.badge-status-out { background-color: #dc3545; }
+@media (max-width: 575.98px) {
+  main.container-xl { padding-left: 0.75rem; padding-right: 0.75rem; }
+}
